@@ -2,19 +2,21 @@ namespace graph;
 
 public class Edge
 {
-    private static int _idCurrent = 0;
-    
-    private Node _start;
-    private Node _end;
-    private int _length;
-    private int _id;
+    private static int _idCurrent;
 
-    public Edge(Node start, Node end,int length)
+    public Edge(Node start, Node end, int length)
     {
-        _start = start;
-        _end = end;
-        _length = length;
-        _id = _idCurrent++;
+        Start = start;
+        End = end;
+        Length = length;
+        Id = _idCurrent++;
     }
 
+    public Node Start { get; }
+
+    public Node End { get; }
+
+    public int Length { get; }
+
+    public int Id { get; }
 }
